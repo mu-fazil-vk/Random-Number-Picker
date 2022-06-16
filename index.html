@@ -1,0 +1,59 @@
+<!-- ©️ Copyrighted by Fazil vk
+Do not remove this copyright from code -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+</head>
+
+<body id="bodybg">
+
+    <div style="text-align-last: right;">
+        <a href="https://github.com/mu.fazil_vk"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ffazil-vk.github.io%2FRandom-Number-Picker%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+    </div>
+    <div id="maindiv">
+        <h2 id="h">Random Number Picker</h2>
+
+        <div class="center">
+            <h1 id="dis">?</h1>
+        </div>
+
+        <div class="scenter">
+            <button id="btt" onclick="timeInter()">Start</button>
+        </div>
+
+    </div>
+    
+    <script>
+        function randNum() {
+            var num = Math.floor((Math.random() * 100) + 1);
+            document.getElementById("dis").innerHTML = num;
+        }
+        
+        function timeInter() {
+            var startTime = new Date().getTime();
+            var interval = setInterval(function(){
+                if(new Date().getTime() - startTime > 2000){
+                    clearInterval(interval);
+                    return;
+                }
+                randNum();
+            },100);
+        }  
+        </script>
+    
+    <p id="p"><b>By <a href="https://github.com/fazil-vk" id="p">Fazil Vk</a></b></p>
+    <a href="https://instagram.com/mu.fazil_vk" style="color: black;"><i class="fa fa-instagram" style="font-size:18px"> mu.fazil_vk</i></a>
+        
+</body>
+
+</html>
